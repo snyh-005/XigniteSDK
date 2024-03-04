@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.xignite</groupId>
 	<artifactId>SDK</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>XigniteSDK</name>
 	<description>XigniteSDK</description>
 	<packaging>jar</packaging>
@@ -18,10 +18,7 @@
 	<properties>
 		<java.version>17</java.version>
 		<mainApplication>com.xignite.sdk.XigniteSdkApplication</mainApplication>
-		<build.timestamp>${maven.build.timestamp}</build.timestamp>
-		<maven.build.timestamp.format>yyyy-MM-dd HH:mm:ss z</maven.build.timestamp.format>
 		<maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
-		<org.mapstruct.version>1.4.2.Final</org.mapstruct.version>
 	</properties>
 
 	<distributionManagement>
@@ -57,17 +54,96 @@
 	</dependencies>
 
 	<build>
+		<defaultGoal>clean generate-sources compile install</defaultGoal>
 		<plugins>
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<version>3.1.1</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-failsafe-plugin</artifactId>
+				<version>${maven-failsafe-plugin.version}</version>
 				<configuration>
-					<excludes>
-						<exclude>
-							<groupId>org.projectlombok</groupId>
-							<artifactId>lombok</artifactId>
-						</exclude>
-					</excludes>
+					<workingDirectory>${project.build.directory}</workingDirectory>
+					<classesDirectory>${project.build.outputDirectory}</classesDirectory>
+					<argLine>-Xmx1024m -Xms128m ${argLine}</argLine>
+					<runOrder>alphabetical</runOrder>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>integration-test</goal>
+							<goal>verify</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>${maven-surefire-plugin.version}</version>
+				<configuration>
+					<workingDirectory>${project.build.directory}</workingDirectory>
+					<classesDirectory>${project.build.outputDirectory}</classesDirectory>
+					<argLine>-Xmx1024m -Xms128m ${argLine}</argLine>
+					<runOrder>alphabetical</runOrder>
+				</configuration>
+			</plugin>
+			<!-- Watch out for dependency convergence!! -->
+			<!-- https://maven.apache.org/enforcer/maven-enforcer-plugin/index.html -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-enforcer-plugin</artifactId>
+				<version>${maven-enforcer-plugin.version}</version>
+				<executions>
+					<execution>
+						<id>enforce</id>
+						<goals>
+							<goal>enforce</goal>
+						</goals>
+						<phase>validate</phase>
+					</execution>
+				</executions>
+				<configuration>
+					<rules>
+						<dependencyConvergence/>
+						<bannedDependencies>
+							<excludes>commons-logging</excludes>
+						</bannedDependencies>
+					</rules>
+				</configuration>
+			</plugin>
+
+			<!-- https://maven.apache.org/plugins/maven-jar-plugin/ -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>${maven-jar-plugin.version}</version>
+				<configuration>
+					<archive>
+						<manifestEntries>
+							<Implementation-Title>${project.artifactId}</Implementation-Title>
+							<Implementation-Version>${project.version}</Implementation-Version>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+
+			<!-- Compile code for 1.8 JVMs -->
+			<!-- https://maven.apache.org/plugins/maven-compiler-plugin/index.html -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven-compiler-plugin.version}</version>
+				<configuration>
+					<parameters>true</parameters>
+					<encoding>${project.build.sourceEncoding}</encoding>
+					<showDeprecation>true</showDeprecation>
+					<compilerArgs>
+						<arg>-Xlint</arg>
+					</compilerArgs>
 				</configuration>
 			</plugin>
 		</plugins>
