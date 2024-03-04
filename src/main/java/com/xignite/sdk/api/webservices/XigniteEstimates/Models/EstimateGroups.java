@@ -1,0 +1,11 @@
+package com.xignite.sdk.api.webservices.XigniteEstimates.Models;
+
+public enum EstimateGroups {
+   EARNINGSESTIMATES,
+   EARNINGSESTIMATESCONSENSUSTREND,
+   EARNINGSSURPRISE,
+   EPSGROWTHRATES,
+   SECTORANALYSIS,
+   EPSESTIMATESANDRECOMMENDATIONS,
+   ALL;
+}
