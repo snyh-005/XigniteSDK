@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          token: ${{ secrets.REPO_PAT }}
+          token: ${{ secrets.TOKEN }}
           submodules: recursive
 
       - name: Set up JDK 17
@@ -27,5 +27,5 @@ jobs:
       - name: Publish to GitHub Packages Apache Maven
         env:
           GITHUB_USERNAME: ${{ secrets.USERNAME }}
-          GITHUB_TOKEN: ${{ secrets.REPO_PAT }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
         run: mvn --settings settings.xml --file pom.xml deploy -DskipTests
