@@ -1,0 +1,21 @@
+name: Format code
+
+on: 
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  formatting:
+    name: Format Code
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+      - uses: axel-op/googlejavaformat-action@v3
+        with:
+          args: "--replace --aosp"
+          files: "src/main/java/com/balance/**/*.java"
+          version: 1.9
+          githubToken: ${{ secrets.REPO_PAT }}
+          commitMessage: "Automated code format"
