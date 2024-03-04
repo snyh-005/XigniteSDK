@@ -1,0 +1,18 @@
+package com.xignite.sdk.api.webservices.XigniteGlobalHistoricalV3.Models;
+
+public class Security {
+   public String CIK;
+   public String CUSIP;
+   public String Symbol;
+   public String ISIN;
+   public String Valoren;
+   public String SEDOL;
+   public String FIGI;
+   public String Name;
+   public String InstrumentClass;
+   public String Market;
+   public String MarketIdentificationCode;
+   public String Sector;
+   public String Industry;
+   public String CompositeFIGI;
+}
