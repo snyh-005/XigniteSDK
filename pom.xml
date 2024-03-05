@@ -68,7 +68,6 @@
 				<configuration>
 					<workingDirectory>${project.build.directory}</workingDirectory>
 					<classesDirectory>${project.build.outputDirectory}</classesDirectory>
-					<argLine>-Xmx1024m -Xms128m ${argLine}</argLine>
 					<runOrder>alphabetical</runOrder>
 				</configuration>
 				<executions>
@@ -87,7 +86,6 @@
 				<configuration>
 					<workingDirectory>${project.build.directory}</workingDirectory>
 					<classesDirectory>${project.build.outputDirectory}</classesDirectory>
-					<argLine>-Xmx1024m -Xms128m ${argLine}</argLine>
 					<runOrder>alphabetical</runOrder>
 				</configuration>
 			</plugin>
@@ -148,5 +146,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
