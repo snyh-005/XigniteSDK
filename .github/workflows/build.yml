@@ -4,6 +4,14 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
+    inputs:
+      IMAGE_TAG:
+        type: choice
+        description: Environment
+        required: true
+        options:
+          - run
 
 jobs:
   test:
