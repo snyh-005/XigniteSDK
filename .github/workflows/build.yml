@@ -29,7 +29,7 @@ jobs:
       - name: Build with Maven (package)
         run: mvn clean package spring-boot:repackage -DskipTests
 
-      - name: Publish to GitHub Packages Apache Maven
+      - name: Deploy to Github Package Registry
         env:
           GITHUB_USERNAME: ${{ secrets.USERNAME }}
           GITHUB_TOKEN: ${{ secrets.REPO_PAT }}
