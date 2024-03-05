@@ -28,5 +28,5 @@ jobs:
       - name: Publish to GitHub Packages Apache Maven
         env:
           GITHUB_USERNAME: ${{ secrets.USERNAME }}
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.REPO_PAT }}
         run: mvn --settings settings.xml --file pom.xml deploy -DskipTests
