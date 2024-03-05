@@ -27,13 +27,13 @@ jobs:
           distribution: 'temurin'
 
       - name: Copy settings.xml
+        env:
+          GITHUB_USERNAME: ${{ secrets.USERNAME }}
+          GITHUB_TOKEN: ${{ secrets.REPO_PAT }}
         run: cp $GITHUB_WORKSPACE/settings.xml $HOME/.m2/settings.xml
 
       - name: Build with Maven (package)
         run: mvn clean package spring-boot:repackage -DskipTests
 
       - name: Deploy to Github Package Registry
-        env:
-          GITHUB_USERNAME: ${{ secrets.USERNAME }}
-          GITHUB_TOKEN: ${{ secrets.REPO_PAT }}
         run: mvn --settings settings.xml --file pom.xml deploy -DskipTests
