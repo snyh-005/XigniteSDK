@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          token: ${{ secrets.TOKEN }}
+          ssh-key: ${{ secrets.TOKEN }}
           submodules: recursive
 
       - name: Set up JDK 17
