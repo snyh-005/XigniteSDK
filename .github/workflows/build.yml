@@ -26,6 +26,9 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
+      - name: Copy settings.xml
+        run: cp settings.xml $HOME/.m2/settings.xml
+
       - name: Build with Maven (package)
         run: mvn clean package spring-boot:repackage -DskipTests
 

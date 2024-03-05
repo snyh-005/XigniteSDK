@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.xignite</groupId>
-	<artifactId>SDK</artifactId>
+	<artifactId>sdk</artifactId>
 	<version>0.0.1</version>
 	<name>XigniteSDK</name>
 	<description>XigniteSDK</description>
