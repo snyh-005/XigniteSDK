@@ -17,6 +17,7 @@ jobs:
   test:
     name: Build and analyze
     runs-on: ubuntu-latest
+    
     steps:
       - uses: actions/checkout@v3
       - name: Set up JDK 17
@@ -28,7 +29,7 @@ jobs:
           submodules: recursive
 
       - name: Build with Maven (package)
-        run: mvn -B package --file pom.xml -DskipTests
+        run: mvn clean package spring-boot:repackage -DskipTests
 
       - name: Publish to GitHub Packages Apache Maven
         env:
