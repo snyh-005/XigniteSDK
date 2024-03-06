@@ -40,6 +40,6 @@ jobs:
           echo "GITHUB_REPOSITORY: $GITHUB_REPOSITORY"
           echo "GITHUB_ACTOR: $GITHUB_ACTOR"
           echo "GITHUB_SHA: $GITHUB_SHA"
-          echo "GITHUB_USERNAME: GITHUB_USERNAME"
-          echo "GITHUB_TOKEN: GITHUB_TOKEN"
+          echo "GITHUB_USERNAME: $GITHUB_USERNAME"
+          echo "GITHUB_TOKEN: $GITHUB_TOKEN"
           mvn deploy -DskipTests
