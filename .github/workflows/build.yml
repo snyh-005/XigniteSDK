@@ -31,8 +31,8 @@ jobs:
           GITHUB_USERNAME: ${{ secrets.USERNAME }}
           GITHUB_TOKEN: ${{ secrets.REPO_PAT }}
         run: |
-          echo "USERNAME: $secrets.USERNAME"
-          echo "REPO_PAT: $secrets.REPO_PAT"
+          echo "GitHub Username: $GITHUB_USERNAME"
+          echo "GitHub Token: $GITHUB_TOKEN"
           cp $GITHUB_WORKSPACE/settings.xml $HOME/.m2/settings.xml
 
       - name: Build with Maven (package)
