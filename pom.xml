@@ -9,12 +9,13 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.xignite</groupId>
+	<description>A Central Repository via OSSRH for xignite sdk</description>
 	<artifactId>sdk</artifactId>
 	<version>0.0.1</version>
 	<name>XigniteSDK</name>
-	<description>XigniteSDK</description>
 	<packaging>jar</packaging>
 	<url>https://maven.pkg.github.com/snyh-005/XigniteSDK</url>
+
 	<properties>
 		<java.version>17</java.version>
 		<mainApplication>com.xignite.sdk.XigniteSdkApplication</mainApplication>
@@ -68,6 +69,7 @@
 				<configuration>
 					<workingDirectory>${project.build.directory}</workingDirectory>
 					<classesDirectory>${project.build.outputDirectory}</classesDirectory>
+					<argLine>-Xmx1024m -Xms128m ${argLine}</argLine>
 					<runOrder>alphabetical</runOrder>
 				</configuration>
 				<executions>
@@ -78,16 +80,6 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>${maven-surefire-plugin.version}</version>
-				<configuration>
-					<workingDirectory>${project.build.directory}</workingDirectory>
-					<classesDirectory>${project.build.outputDirectory}</classesDirectory>
-					<runOrder>alphabetical</runOrder>
-				</configuration>
 			</plugin>
 			<!-- Watch out for dependency convergence!! -->
 			<!-- https://maven.apache.org/enforcer/maven-enforcer-plugin/index.html -->
