@@ -30,10 +30,7 @@ jobs:
         env:
           GITHUB_USERNAME: ${{ secrets.USERNAME }}
           GITHUB_TOKEN: ${{ secrets.REPO_PAT }}
-        run: |
-          echo "GitHub Username: $GITHUB_USERNAME"
-          echo "GitHub Token: $GITHUB_TOKEN"
-          cp $GITHUB_WORKSPACE/settings.xml $HOME/.m2/settings.xml
+        run: cp $GITHUB_WORKSPACE/settings.xml $HOME/.m2/settings.xml
 
       - name: Build with Maven (package)
         run: mvn clean package spring-boot:repackage -DskipTests
@@ -42,10 +39,4 @@ jobs:
         env:
           GITHUB_USERNAME: ${{ secrets.USERNAME }}
           GITHUB_TOKEN: ${{ secrets.REPO_PAT }}
-        run: |
-          echo "GITHUB_REPOSITORY: $GITHUB_REPOSITORY"
-          echo "GITHUB_ACTOR: $GITHUB_ACTOR"
-          echo "GITHUB_SHA: $GITHUB_SHA"
-          echo "GITHUB_USERNAME: $GITHUB_USERNAME"
-          echo "GITHUB_TOKEN: $GITHUB_TOKEN"
-          mvn deploy -DskipTests
+        run: mvn deploy -DskipTests

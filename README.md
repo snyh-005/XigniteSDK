@@ -1,10 +1,11 @@
-JavaSDK
-=======
+Xignite SDK for Java 17+
 
-Xignite SDK for Java 7
+This is not the official Java SDK for Xignite API.
 
-No source files at this time.  Download the SDK at https://github.com/Xignite/JavaSDK/releases
+it is forked from the official repository so that it can be used in the project as a dependency.
 
-See [http://xignite.github.io/JavaSDK](http://xignite.github.io/JavaSDK/) for details.
+It is a simple to use, yet powerful library that allows you to access Xignite API from your Java application.
 
-Latest version is 1.1.4.9
+Find the official SDK and see here [http://xignite.github.io/JavaSDK](http://xignite.github.io/JavaSDK/) for details.
+
+
