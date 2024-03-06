@@ -39,6 +39,9 @@ jobs:
         run: mvn clean package spring-boot:repackage -DskipTests
 
       - name: Deploy to Github Package Registry
+        env:
+          GITHUB_USERNAME: ${{ secrets.USERNAME }}
+          GITHUB_TOKEN: ${{ secrets.REPO_PAT }}
         run: |
           echo "GITHUB_REPOSITORY: $GITHUB_REPOSITORY"
           echo "GITHUB_ACTOR: $GITHUB_ACTOR"
