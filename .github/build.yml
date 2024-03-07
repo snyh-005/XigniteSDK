@@ -1,0 +1,42 @@
+name: Maven Package
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+    inputs:
+      IMAGE_TAG:
+        type: choice
+        description: Environment
+        required: true
+        options:
+          - run
+
+jobs:
+  test:
+    name: Build and analyze
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Copy settings.xml
+        env:
+          GITHUB_USERNAME: ${{ secrets.USERNAME }}
+          GITHUB_TOKEN: ${{ secrets.REPO_PAT }}
+        run: cp $GITHUB_WORKSPACE/settings.xml $HOME/.m2/settings.xml
+
+      - name: Build with Maven (package)
+        run: mvn clean package spring-boot:repackage -DskipTests
+
+      - name: Deploy to Github Package Registry
+        env:
+          GITHUB_USERNAME: ${{ secrets.USERNAME }}
+          GITHUB_TOKEN: ${{ secrets.REPO_PAT }}
+        run: mvn deploy -DskipTests
