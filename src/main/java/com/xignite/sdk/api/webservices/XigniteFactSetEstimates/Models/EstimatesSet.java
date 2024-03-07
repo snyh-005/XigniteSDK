@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteFactSetEstimates.Models;
 
+import lombok.Data;
+
+@Data
 public class EstimatesSet {
    public String Outcome;
    public String Message;

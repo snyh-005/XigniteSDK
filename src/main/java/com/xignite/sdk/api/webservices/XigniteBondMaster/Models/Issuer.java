@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteBondMaster.Models;
 
+import lombok.Data;
+
+@Data
 public class Issuer {
    public String IssuerName;
    public String Domicile;

@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteGlobalESG.Models;
 
+import lombok.Data;
+
+@Data
 public class CompanyEmissions {
    public String AsOfDate;
    public Double Scope1Emissions;

@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteGlobalRealTimeOptions.Models;
 
+import lombok.Data;
+
+@Data
 public class ChartBar {
    public String StartDate;
    public String StartTime;

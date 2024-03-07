@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteGlobalCurrenciesFile.Models;
 
+import lombok.Data;
+
+@Data
 public class GlobalCurrenciesFile {
    public String Outcome;
    public String Message;

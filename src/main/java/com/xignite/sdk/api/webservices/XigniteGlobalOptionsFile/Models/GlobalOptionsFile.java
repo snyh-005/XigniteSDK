@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteGlobalOptionsFile.Models;
 
+import lombok.Data;
+
+@Data
 public class GlobalOptionsFile {
    public String Outcome;
    public String Message;

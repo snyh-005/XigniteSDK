@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteGlobalFundFundamentals.Models;
 
+import lombok.Data;
+
+@Data
 public class QuarterEndLoadAdjustedTrailingReturns {
    public Double QuarterEndLoadAdjustedTrailingReturnYTD;
    public Double QuarterEndLoadAdjustedTrailingReturnM1;

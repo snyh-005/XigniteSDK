@@ -14,8 +14,16 @@ import java.util.LinkedHashMap;
 public class RestClient {
 	static String version;
 
-	public RestClient(ApiBase apiBase) {
-		version = apiBase.getSdkVersion();
+	static {
+		try {
+			Package aPackage = RestClient.class.getPackage();
+			version = String.format("JavaSdk:%1$s", aPackage.getImplementationVersion().replace("\r", "").replace("\n", ""));
+		} catch (Exception var1) {
+			version = "UNKNOWN";
+		}
+
+	}
+	public RestClient() {
 	}
 
 	public static String get(String url, LinkedHashMap<String, String> params) throws XigniteApiException {
@@ -75,14 +83,4 @@ public class RestClient {
 
 		return sb.toString();
 	}
-
-	/*static {
-		try {
-			Package aPackage = RestClient.class.getPackage();
-			version = String.format("JavaSdk:%1$s", aPackage.getImplementationVersion().replace("\r", "").replace("\n", ""));
-		} catch (Exception var1) {
-			version = "UNKNOWN";
-		}
-
-	}*/
 }

@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteGlobalHistoricalV3.Models;
 
+import lombok.Data;
+
+@Data
 public class ChartBar {
    public String StartDateTime;
    public String EndDateTime;

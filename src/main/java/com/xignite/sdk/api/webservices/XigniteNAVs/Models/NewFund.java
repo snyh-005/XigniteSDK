@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteNAVs.Models;
 
+import lombok.Data;
+
+@Data
 public class NewFund {
    public String Outcome;
    public String Message;

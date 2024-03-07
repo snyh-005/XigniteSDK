@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteGlobalESG.Models;
 
+import lombok.Data;
+
+@Data
 public class TemperatureScore {
    public String AsOfDate;
    public String NearTerm;

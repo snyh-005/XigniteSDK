@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteGlobalCorporateActions.Models;
 
+import lombok.Data;
+
+@Data
 public class RightsList {
    public String Outcome;
    public String Message;

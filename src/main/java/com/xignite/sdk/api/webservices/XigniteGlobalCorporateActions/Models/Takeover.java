@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteGlobalCorporateActions.Models;
 
+import lombok.Data;
+
+@Data
 public class Takeover {
    public String EffectiveDate;
    public String EventStatus;

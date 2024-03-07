@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteGlobalCorporateActions.Models;
 
+import lombok.Data;
+
+@Data
 public class Rights {
    public String ExDate;
    public String RecordDate;

@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteGlobalHistoricalFile.Models;
 
+import lombok.Data;
+
+@Data
 public class GlobalHistoricalFile {
    public String Outcome;
    public String Message;

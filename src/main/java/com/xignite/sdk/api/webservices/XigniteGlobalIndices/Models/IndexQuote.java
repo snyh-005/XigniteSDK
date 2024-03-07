@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteGlobalIndices.Models;
 
+import lombok.Data;
+
+@Data
 public class IndexQuote {
    public String Date;
    public String Time;

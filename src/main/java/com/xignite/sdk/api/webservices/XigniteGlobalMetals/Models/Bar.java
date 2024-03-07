@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteGlobalMetals.Models;
 
+import lombok.Data;
+
+@Data
 public class Bar {
    public String Outcome;
    public String Message;

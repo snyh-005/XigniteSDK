@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteGlobalRealTime.Models;
 
+import lombok.Data;
+
+@Data
 public class MarketMovers {
    public String Outcome;
    public String Message;

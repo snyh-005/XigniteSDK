@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteEstimates.Models;
 
+import lombok.Data;
+
+@Data
 public class EstimatesResearchField {
    public String Outcome;
    public String Message;

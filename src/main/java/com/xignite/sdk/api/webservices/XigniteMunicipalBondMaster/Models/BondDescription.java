@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteMunicipalBondMaster.Models;
 
+import lombok.Data;
+
+@Data
 public class BondDescription {
    public String Outcome;
    public String Message;

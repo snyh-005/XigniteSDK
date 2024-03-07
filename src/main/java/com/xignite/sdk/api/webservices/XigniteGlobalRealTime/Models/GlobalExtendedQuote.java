@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteGlobalRealTime.Models;
 
+import lombok.Data;
+
+@Data
 public class GlobalExtendedQuote {
    public String Outcome;
    public String Message;

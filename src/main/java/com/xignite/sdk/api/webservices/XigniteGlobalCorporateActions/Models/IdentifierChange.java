@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteGlobalCorporateActions.Models;
 
+import lombok.Data;
+
+@Data
 public class IdentifierChange {
    public String EffectiveDate;
    public String IdentifierType;

@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteGlobalOptions.Models;
 
+import lombok.Data;
+
+@Data
 public class OptionChartBars {
    public String Outcome;
    public String Message;

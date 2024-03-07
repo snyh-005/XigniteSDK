@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteNAVs.Models;
 
+import lombok.Data;
+
+@Data
 public class CompleteDividend {
    public String Outcome;
    public String Message;

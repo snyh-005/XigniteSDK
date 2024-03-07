@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteEdgar.Models;
 
+import lombok.Data;
+
+@Data
 public class SECCompanyData {
    public String CompanyConformedName;
    public String CentralIndexKey;

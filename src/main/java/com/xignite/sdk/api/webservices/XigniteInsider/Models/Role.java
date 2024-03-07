@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteInsider.Models;
 
+import lombok.Data;
+
+@Data
 public class Role {
    public String Outcome;
    public String Message;

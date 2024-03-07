@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteGlobalIndices.Models;
 
+import lombok.Data;
+
+@Data
 public class IndexBars {
    public String Outcome;
    public String Message;

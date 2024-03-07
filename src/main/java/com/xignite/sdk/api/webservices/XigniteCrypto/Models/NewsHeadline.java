@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteCrypto.Models;
 
+import lombok.Data;
+
+@Data
 public class NewsHeadline {
    public String DateTime;
    public String Title;

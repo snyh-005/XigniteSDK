@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteGlobalMetals.Models;
 
+import lombok.Data;
+
+@Data
 public class ExtendedMetalQuote {
    public String Outcome;
    public String Message;

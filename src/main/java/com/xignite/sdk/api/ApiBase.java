@@ -13,13 +13,8 @@ import org.springframework.stereotype.Component;
 @Data
 @ToString
 @Component
-@ConfigurationProperties(prefix = "xignite")
-@Scope("singleton")
 public abstract class ApiBase {
 	protected String apiToken;
 	protected String endPointUrl;
 	protected String sdkVersion;
-
-	public ApiBase() {
-	}
 }

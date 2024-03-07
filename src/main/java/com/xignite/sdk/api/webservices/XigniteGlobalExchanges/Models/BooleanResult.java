@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteGlobalExchanges.Models;
 
+import lombok.Data;
+
+@Data
 public class BooleanResult {
    public String Outcome;
    public String Message;

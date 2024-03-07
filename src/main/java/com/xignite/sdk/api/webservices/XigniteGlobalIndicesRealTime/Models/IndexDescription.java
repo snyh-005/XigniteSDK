@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteGlobalIndicesRealTime.Models;
 
+import lombok.Data;
+
+@Data
 public class IndexDescription {
    public String Outcome;
    public String Message;

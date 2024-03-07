@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteGlobalNews.Models;
 
+import lombok.Data;
+
+@Data
 public class MarketHeadlines {
    public String Outcome;
    public String Message;

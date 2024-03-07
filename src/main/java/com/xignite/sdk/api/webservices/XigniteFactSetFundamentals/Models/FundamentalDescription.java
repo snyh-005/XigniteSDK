@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteFactSetFundamentals.Models;
 
+import lombok.Data;
+
+@Data
 public class FundamentalDescription {
    public String Type;
    public String Name;

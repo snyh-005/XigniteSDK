@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteBATSRealTime.Models;
 
+import lombok.Data;
+
+@Data
 public class EquityChartBars {
    public String Outcome;
    public String Message;

@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteGlobalFundFundamentals.Models;
 
+import lombok.Data;
+
+@Data
 public class FundFundamentalDescription {
    public String Type;
    public String Name;

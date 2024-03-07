@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteMoneyMarkets.Models;
 
+import lombok.Data;
+
+@Data
 public class RateDescription {
    public String Outcome;
    public String Message;

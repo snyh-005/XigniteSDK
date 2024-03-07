@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteGlobalMaster.Models;
 
+import lombok.Data;
+
+@Data
 public class IdentifiersByExchange {
    public String Outcome;
    public String Message;

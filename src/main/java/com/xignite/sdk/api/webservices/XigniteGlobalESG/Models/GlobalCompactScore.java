@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteGlobalESG.Models;
 
+import lombok.Data;
+
+@Data
 public class GlobalCompactScore {
    public String AsOfDate;
    public Double GlobalCompact;

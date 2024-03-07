@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteBondsRealTime.Models;
 
+import lombok.Data;
+
+@Data
 public class PriceComposite {
    public String Outcome;
    public String Message;

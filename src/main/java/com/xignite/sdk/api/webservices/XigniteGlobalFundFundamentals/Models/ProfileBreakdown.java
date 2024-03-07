@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteGlobalFundFundamentals.Models;
 
+import lombok.Data;
+
+@Data
 public class ProfileBreakdown {
    public String FundName;
    public String LegalName;

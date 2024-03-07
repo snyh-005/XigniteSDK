@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteEarningsCalendar.Models;
 
+import lombok.Data;
+
+@Data
 public class ReplayInformation {
    public String Outcome;
    public String Message;

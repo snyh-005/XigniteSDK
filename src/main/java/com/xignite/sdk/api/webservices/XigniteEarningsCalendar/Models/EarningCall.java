@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteEarningsCalendar.Models;
 
+import lombok.Data;
+
+@Data
 public class EarningCall {
    public String Outcome;
    public String Message;

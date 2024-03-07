@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteCrypto.Models;
 
+import lombok.Data;
+
+@Data
 public class CryptoChartBars {
    public String Outcome;
    public String Message;

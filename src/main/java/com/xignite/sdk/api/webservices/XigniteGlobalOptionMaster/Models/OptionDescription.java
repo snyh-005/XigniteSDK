@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteGlobalOptionMaster.Models;
 
+import lombok.Data;
+
+@Data
 public class OptionDescription {
    public String Outcome;
    public String Message;

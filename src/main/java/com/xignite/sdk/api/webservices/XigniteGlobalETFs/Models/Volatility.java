@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteGlobalETFs.Models;
 
+import lombok.Data;
+
+@Data
 public class Volatility {
    public Double Volatility5Year;
    public Double Volatility3Year;

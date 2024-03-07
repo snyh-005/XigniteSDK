@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteNASDAQLastSale.Models;
 
+import lombok.Data;
+
+@Data
 public class GlobalBar {
    public String Outcome;
    public String Message;

@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteCorporateActionsFile.Models;
 
+import lombok.Data;
+
+@Data
 public class CorporateActionsFile {
    public String Outcome;
    public String Message;

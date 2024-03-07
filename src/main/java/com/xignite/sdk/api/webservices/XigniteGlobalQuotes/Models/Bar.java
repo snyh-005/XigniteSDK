@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteGlobalQuotes.Models;
 
+import lombok.Data;
+
+@Data
 public class Bar {
    public String StartDate;
    public String StartTime;

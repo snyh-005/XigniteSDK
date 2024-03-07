@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteGlobalRealTimeFutures.Models;
 
+import lombok.Data;
+
+@Data
 public class FutureDescription {
    public String Identifier;
    public String IdentifierType;

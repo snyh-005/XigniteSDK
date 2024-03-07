@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteEdgar.Models;
 
+import lombok.Data;
+
+@Data
 public class Submission {
    public String Outcome;
    public String Message;

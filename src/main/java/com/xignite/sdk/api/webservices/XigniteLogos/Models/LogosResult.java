@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteLogos.Models;
 
+import lombok.Data;
+
+@Data
 public class LogosResult {
    public String Outcome;
    public String Message;

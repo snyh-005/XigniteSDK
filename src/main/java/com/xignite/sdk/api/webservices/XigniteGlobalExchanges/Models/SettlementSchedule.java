@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteGlobalExchanges.Models;
 
+import lombok.Data;
+
+@Data
 public class SettlementSchedule {
    public String Outcome;
    public String Message;

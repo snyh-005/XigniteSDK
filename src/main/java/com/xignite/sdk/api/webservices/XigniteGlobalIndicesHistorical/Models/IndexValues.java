@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteGlobalIndicesHistorical.Models;
 
+import lombok.Data;
+
+@Data
 public class IndexValues {
    public String Outcome;
    public String Message;

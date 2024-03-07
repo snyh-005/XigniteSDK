@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteGlobalHolidays.Models;
 
+import lombok.Data;
+
+@Data
 public class Exchange {
    public String Outcome;
    public String Message;

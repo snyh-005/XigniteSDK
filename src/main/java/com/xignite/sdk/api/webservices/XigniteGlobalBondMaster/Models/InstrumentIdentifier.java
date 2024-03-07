@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteGlobalBondMaster.Models;
 
+import lombok.Data;
+
+@Data
 public class InstrumentIdentifier {
    public String Valoren;
    public String CUSIP;

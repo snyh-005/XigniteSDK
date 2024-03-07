@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteInsider.Models;
 
+import lombok.Data;
+
+@Data
 public class NonDerivativeTransaction {
    public Value securityTitle;
    public Value transactionDate;

@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteInterBanks.Models;
 
+import lombok.Data;
+
+@Data
 public class SIBORRate {
    public String Outcome;
    public String Message;

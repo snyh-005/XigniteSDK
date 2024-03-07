@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteGlobalNews.Models;
 
+import lombok.Data;
+
+@Data
 public class Security {
    public String CIK;
    public String CUSIP;

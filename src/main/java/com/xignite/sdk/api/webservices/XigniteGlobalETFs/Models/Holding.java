@@ -1,5 +1,8 @@
 package com.xignite.sdk.api.webservices.XigniteGlobalETFs.Models;
 
+import lombok.Data;
+
+@Data
 public class Holding {
    public Security Security;
    public Double NotionalValue;
