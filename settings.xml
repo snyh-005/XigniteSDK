@@ -14,7 +14,7 @@
             </activation>
             <properties>
                 <gpg.executable>gpg</gpg.executable>
-                <gpg.passphrase>Saniah.Gpgkey1</gpg.passphrase>
+                <gpg.passphrase>${env.GITHUB_GPG}</gpg.passphrase>
             </properties>
         </profile>
     </profiles>
